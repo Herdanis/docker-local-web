@@ -19,7 +19,7 @@ services:
             - php
             - mysql
     php:
-        image: herdanis/php7.4fpm-composer-laravel
+        image: herdanis/php7.4fpm-composer-laravel:1.0
         container_name: php
         volumes:
             - ./app:/var/www/html
@@ -63,7 +63,7 @@ services:
         image: phpmyadmin
         container_name: phpmyadmin
         ports:
-            - 81:80
+            - 82:80
         networks:
             - local
         restart: always
